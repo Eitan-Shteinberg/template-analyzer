@@ -712,8 +712,8 @@
     "id": "TA-000025",
     "name": "AKS.UpgradeToNonVulnerableVersion",
     "shortDescription": "Kubernetes Services should be upgraded to a non-vulnerable Kubernetes version",
-    "fullDescription": "Upgrade your Kubernetes service cluster to a later Kubernetes version to protect against known vulnerabilities in your current Kubernetes version. Vulnerability CVE-2019-9946 has been patched in Kubernetes versions 1.11.9+, 1.12.7+, 1.13.5+, and 1.14.0+. Running on older versions could mean you are not using latest security classes. Usage of such old classes and types can make your application vulnerable.",
-    "recommendation": "Upgrade to a non-vulnerable Kubernetes version (1.11.9+, 1.12.7+, 1.13.5+, and 1.14.0+)",
+    "fullDescription": "Upgrade your Kubernetes service cluster to the latest stable version to protect against known vulnerabilities.",
+    "recommendation": "Upgrade to the latest stable Kubernetes version.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000025-kubernetes-services-should-be-upgraded-to-a-non-vulnerable-kubernetes-version",
     "severity": 1,
     "evaluation": {
@@ -851,9 +851,9 @@
   {
     "id": "TA-000030",
     "name": "ClassicCompute.MigrateToARM",
-    "shortDescription": "Migrate your Classic Compute VM to ARM",
-    "fullDescription": "Azure supports two deployment models: Classic and Azure Resource Manager (ARM). ARM provides several security enhancements to the Classic model.",
-    "recommendation": "Use ARM for your virtual machines to provide security enhancements such as: stronger access control (RBAC), better auditing, ARM-based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication and support for tags and resource groups for easier security management",
+    "shortDescription": "Migrate Classic Compute VMs to ARM",
+    "fullDescription": "Azure Resource Manager (ARM) provides several security enhancements over the Classic deployment model.",
+    "recommendation": "Use Azure Resource Manager for your virtual machines for improved security and access to features like RBAC, better auditing, managed identities, and Key Vault integration.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000030-migrate-your-classic-compute-vm-to-arm",
     "severity": 1,
     "evaluation": {
@@ -865,9 +865,9 @@
   {
     "id": "TA-000031",
     "name": "ClassicStorage.MigrateToARM",
-    "shortDescription": "Migrate your Classic Storage Account to ARM",
-    "fullDescription": "Azure supports two deployment models: Classic and Azure Resource Manager (ARM). ARM provides several security enhancements to the Classic model.",
-    "recommendation": "Use ARM for your storage accounts to provide security enhancements such as: stronger access control (RBAC), better auditing, ARM-based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication and support for tags and resource groups for easier security management",
+    "shortDescription": "Migrate Classic Storage Accounts to ARM",
+    "fullDescription": "Azure Resource Manager (ARM) provides several security enhancements over the Classic deployment model.",
+    "recommendation": "Use Azure Resource Manager for your storage accounts for improved security and access to features like RBAC, better auditing, managed identities, and Key Vault integration.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000031-migrate-your-classic-storage-account-to-arm",
     "severity": 1,
     "evaluation": {
@@ -924,9 +924,9 @@
   {
     "id": "TA-000034",
     "name": "APIM.DisabletServiceSecretsSharingWithReadOnlyUsers",
-    "shortDescription": "API Management minimum API version should be set to 2019-12-01 or higher",
-    "fullDescription": "To prevent service secrets from being shared with read-only users, the minimum API version should be set to 2019-12-01 or higher.",
-    "recommendation": "Set the apiVersionContstraint.minAPIversion property to 2019-12-01 or higher to prevent service secrets from being shared with read-only users.",
+    "shortDescription": "API Management minimum API version should be recent",
+    "fullDescription": "To prevent service secrets from being shared with read-only users, the minimum API version should be set to a recent date.",
+    "recommendation": "Set the apiVersionConstraint.minApiVersion property to a recent date to prevent service secrets from being shared with read-only users.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000034-api-management-minimum-api-version-should-be-set-to-2019-12-01-or-higher",
     "severity": 2,
     "evaluation": {
