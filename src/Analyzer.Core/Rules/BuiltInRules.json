@@ -712,26 +712,16 @@
     "id": "TA-000025",
     "name": "AKS.UpgradeToNonVulnerableVersion",
     "shortDescription": "Kubernetes Services should be upgraded to a non-vulnerable Kubernetes version",
-    "fullDescription": "Upgrade your Kubernetes service cluster to the latest stable version to protect against known vulnerabilities.",
-    "recommendation": "Upgrade to the latest stable Kubernetes version.",
+    "fullDescription": "Upgrade your Kubernetes service cluster to a supported version to protect against known vulnerabilities. Older versions of Kubernetes are not supported and do not receive security patches.",
+    "recommendation": "Upgrade to a supported Kubernetes version. According to the AKS release calendar, supported versions are 1.31, 1.32, 1.33, and newer.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000025-kubernetes-services-should-be-upgraded-to-a-non-vulnerable-kubernetes-version",
     "severity": 1,
     "evaluation": {
       "resourceType": "Microsoft.ContainerService/managedClusters",
-      "allOf": [
-        {
-          "not": {
-            "path": "properties.kubernetesVersion",
-            "regex": "^1\\.((11\\.[0-8])|(12\\.[0-6])|(13\\.[0-4]))"
-          }
-        },
-        {
-          "not": {
-            "path": "properties.kubernetesVersion",
-            "regex": "^1\\.(([0-9]|10)\\.\\d+)"
-          }
-        }
-      ]
+      "not": {
+        "path": "properties.kubernetesVersion",
+        "regex": "^1\\.(3[1-9]|[4-9][0-9])\\.\\d+"
+      }
     }
   },
   {
