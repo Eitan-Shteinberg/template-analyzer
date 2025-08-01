@@ -914,9 +914,9 @@
   {
     "id": "TA-000034",
     "name": "APIM.DisabletServiceSecretsSharingWithReadOnlyUsers",
-    "shortDescription": "API Management minimum API version should be recent",
-    "fullDescription": "To prevent service secrets from being shared with read-only users, the minimum API version should be set to a recent date.",
-    "recommendation": "Set the apiVersionConstraint.minApiVersion property to a recent date to prevent service secrets from being shared with read-only users.",
+    "shortDescription": "API Management minimum API version should be set to 2019-12-01 or higher",
+    "fullDescription": "To prevent service secrets from being shared with read-only users, the minimum API version should be set to 2019-12-01 or higher. This opts in to a breaking change that enhances security by not returning secrets for users with read-only permissions.",
+    "recommendation": "Set the properties.apiVersionConstraint.minApiVersion property to '2019-12-01' or a later date to prevent service secrets from being shared with read-only users.",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000034-api-management-minimum-api-version-should-be-set-to-2019-12-01-or-higher",
     "severity": 2,
     "evaluation": {
