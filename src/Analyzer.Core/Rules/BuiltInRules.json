@@ -626,8 +626,8 @@
     "id": "TA-000020",
     "name": "Authorization.UseBuiltInRBAC",
     "shortDescription": "Audit usage of custom RBAC roles",
-    "fullDescription": "Audit built-in roles such as 'Owner, Contributer, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling.",
-    "recommendation": "Audit built-in roles such as 'Owner, Contributer, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling",
+    "fullDescription": "Audit built-in roles such as 'Owner, Contributor, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling.",
+    "recommendation": "Audit built-in roles such as 'Owner, Contributor, Reader' instead of custom RBAC roles, which are error prone. Using custom roles is treated as an exception and requires a rigorous review and threat modeling",
     "helpUri": "https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md/#ta-000020-audit-usage-of-custom-rbac-roles",
     "severity": 3,
     "evaluation": {
